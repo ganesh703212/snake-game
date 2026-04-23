@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cyan-neon: #00f2ff;
+  --color-magenta-neon: #ff00e5;
+  --color-bg-dark: #050506;
+}
+
+@layer utilities {
+  .neon-border-cyan {
+    box-shadow: 0 0 10px rgba(0, 242, 255, 0.3), inset 0 0 5px rgba(0, 242, 255, 0.2);
+    border: 1px solid rgba(0, 242, 255, 0.5);
+  }
+  .neon-text-cyan {
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.6);
+    color: var(--color-cyan-neon);
+  }
+  .neon-text-magenta {
+    text-shadow: 0 0 8px rgba(255, 0, 229, 0.6);
+    color: var(--color-magenta-neon);
+  }
+  .snake-node {
+    background: var(--color-cyan-neon);
+    box-shadow: 0 0 10px var(--color-cyan-neon);
+    border-radius: 2px;
+  }
+  .food-node {
+    background: var(--color-magenta-neon);
+    box-shadow: 0 0 10px var(--color-magenta-neon);
+    border-radius: 50%;
+  }
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .music-bar-progress {
+    background: linear-gradient(90deg, var(--color-cyan-neon), var(--color-magenta-neon));
+    box-shadow: 0 0 8px rgba(0, 242, 255, 0.5);
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--color-bg-dark);
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: #e0e0e0;
+}
